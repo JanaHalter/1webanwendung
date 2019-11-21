@@ -103,7 +103,8 @@
 						  
 							 $_SESSION['user'] = $search_object->id;
 							 echo 'Perfekt';
-							  header('Location: /webanwendung/index.php');
+							  header('Location: /webanwendung/afterlogin.php');
+							  
 							else:
 							  echo 'Deine Angaben sind falsch! Überprüfe diese bitte noch einmal';
 							endif;

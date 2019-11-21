@@ -93,8 +93,8 @@ while ($row = $result->fetch_assoc()):?>
           <td><?php echo $row['anzahl'];?></td>
           <td><?php echo $row['supermarkt'];?></td>
           <td>
-            <a href="index.php?edit=<?php echo $row['id'];?>"
-            class ="btn btn-info btn-md">Bearbeiten</a>
+            <a href="afterlogin.php?edit=<?php echo $row['id'];?>"
+            class ="btn btn-info btn-md">Edit</a>
             <a href="process.php?delete=<?php echo $row['id'];?>"
             class ="btn btn-danger">Löschen</a>
           </td>
@@ -117,20 +117,27 @@ function pre_r($array){
 <h3>Die Einkaufsliste</h3>
 <div class="row justify-content-center">
     <form action="process.php" method="POST">
+    <input type="hidden" name="id" value="<?php echo $id; ?>">
         <div class="form-group">
         <label>Einkauf</label>
-        <input type="text" name="einkauf" class="form-control" value="Was musst du kaufen?">
+        <input type="text" name="einkauf" class="form-control" value="<?php echo $einkauf?>" placeholder="Was musst du kaufen?">
         </div>
         <div class="form-group">
         <label>Anzahl</label>
-        <input type="text" name="anzahl" class="form-control" value="Wie viel brauchst du?">
+        <input type="text" name="anzahl" class="form-control" value="<?php echo $anzahl?>" placeholder="Wie viel brauchst du?">
         </div>
         <div class="form-group">
         <label>Supermarkt</label>
-        <input type="text" name="supermarkt" class="form-control" value="Wo willst du es kaufen?">
+        <input type="text" name="supermarkt" class="form-control"  value="<?php echo $supermarkt?>" placeholder="Wo willst du es kaufen?">
         </div>
         <div class="form-group">
-        <input class="btn btn-secondary btn-md" type="submit" name="speichern" value="Speichern">
+        <?php 
+        if ($update==true):
+        ?>
+          <button type ="submit" class="btn btn-primary" name="update" placeholder="Update">
+        <?php else: ?>
+        <input class="btn btn-secondary btn-md" type="submit"  name="speichern" placeholder="Speichern">
+        <?php endif; ?>
         </div>
       </form>
 </div>
