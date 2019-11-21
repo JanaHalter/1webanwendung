@@ -17,7 +17,7 @@ if (isset($_POST['speichern'])){
     $_SESSION['message'] = "Der Eintrag wurde gespeichert!";
     $_SESSION['msg_type'] = "success";
 
-    header("location: afterlogin.php");
+    header("location: /webanwendung/afterlogin.php");
 
     $mysqli->query("INSERT INTO data (einkauf, anzahl, supermarkt) VALUES('$einkauf', '$anzahl', '$supermarkt')") or 
     die($mysqli->error);
@@ -31,7 +31,7 @@ if (isset($_GET['delete'])){
     $_SESSION['message'] = "Der Eintrag wurde gelöscht!";
     $_SESSION['msg_type'] = "danger";
 
-    header("location: afterlogin.php");
+    header("location: /webanwendung/afterlogin.php");
 }
 
 if(isset($_GET['edit'])){
@@ -56,8 +56,7 @@ if(isset($_POST ['update'])){
 
     $SESSION['message'] = "Der Eintrag wurde geändert";
     $_SESSION['msg_type'] = "warning";
-    header("location: afterlogin.php");
-
-
-
+    header("location: /webanwendung/afterlogin.php");
 }
+
+?>

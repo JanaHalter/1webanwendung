@@ -115,7 +115,6 @@
 </div>
 </div>
 </div>
-    
 
 
 	<div id="kontakt" class="offset">
@@ -136,3 +135,4 @@
 
 </body>
 </html>
+

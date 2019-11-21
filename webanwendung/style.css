@@ -115,7 +115,7 @@ body{
 	border-color: #3abfe0;
 }
 
-/*List*/
+/*List
 .list{
 	background-color:#fff;
 	margin: 1.5rem auto;
@@ -124,14 +124,10 @@ body{
 	box-sizing: border-box;
 	border-radius: .7rem;
 	box-shadow: 1rem 1rem rgba(0,0,0,1);
-	
-	/*funktioniert noch nicht*/
-.list .header {
-	font-family: 'Liu Jian Mao Cao';
-	margin: 0 0 3.3rem 0;	
 }
 	
-	/*Items*/
+	
+	/*Items
 	.items li:hover .done-button{
 		opacity:1;
 	}
@@ -166,6 +162,7 @@ outline:none;
 	border: 0;
 	opacity: 0.5;
 }
+/*/
 .submit{
 	border-width: medium;
 	border-radius: 0;

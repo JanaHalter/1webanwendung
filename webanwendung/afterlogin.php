@@ -134,9 +134,9 @@ function pre_r($array){
         <?php 
         if ($update==true):
         ?>
-          <button type ="submit" class="btn btn-primary" name="update" placeholder="Update">
+          <input class="btn btn-secondary btn-md" type ="submit" name="update" value="Update">
         <?php else: ?>
-        <input class="btn btn-secondary btn-md" type="submit"  name="speichern" placeholder="Speichern">
+        <input class="btn btn-secondary btn-md" type="submit"  name="speichern" value="Speichern">
         <?php endif; ?>
         </div>
       </form>
